@@ -1,7 +1,0 @@
-class Step < ActiveRecord::Base
-  belongs_to :processdef
-  attr_accessible :description, :lt, :name, :processdef_id, :pt, :step_order
-  validates :step_order, :uniqueness => {:scope => :processdef_id, :message => "must be unique."}
-  acts_as_list :scope => :processdef, :column => :step_order
-
-end
