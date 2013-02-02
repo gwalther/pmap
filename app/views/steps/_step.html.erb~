@@ -1,0 +1,20 @@
+
+<div id="step<%= step.step_order %>" class="step_block" data-order="<%= step.step_order %>">
+	<div class="step_order">STEP <%= step.step_order %></div>
+	<div class="section step_name"><b><%= step.name %></b></div>
+    	<div class="section process_time">
+	    <table>
+		<tr>
+			<td class="label">PT:</td><td><%= step.pt %></td>
+			<td class="label">LT:</td><td><%= step.lt %></td>
+	    	</tr>
+	</table>
+    </div>
+    <div class="command_bar section">
+	    <%= link_to image_tag("edit.png"), edit_processdef_step_path(@processdef, step) %> &nbsp;
+	    <%= link_to image_tag("delete.png"), [@processdef, step], method: :delete, data: { confirm: 'Are you sure?' } %>   &nbsp;&nbsp; 
+	    <%= link_to image_tag("left.png"), decrement_processdef_step_path(@processdef, step), :method => :post %> &nbsp;
+	    <%= link_to image_tag("right.png"), increment_processdef_step_path(@processdef, step), :method => :post %> &nbsp;
+    </div>
+  </div>
+  

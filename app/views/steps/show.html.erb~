@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @step.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @step.description %>
+</p>
+
+<p>
+  <b>Pt:</b>
+  <%= @step.pt %>
+</p>
+
+<p>
+  <b>Lt:</b>
+  <%= @step.lt %>
+</p>
+
+
+
+<!-- <%= link_to 'Edit', edit_processdef_step_path(@processdef, @step) %> | -->
+<%= link_to 'Back', processdef_steps_path(@processdef) %>

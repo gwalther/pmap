@@ -1,0 +1,14 @@
+
+
+<div class="title"><%= @processdef.name %> Steps</div>
+<%= link_to 'New Step', new_processdef_step_path(@processdef) %>
+<br/>
+<br/>
+
+<div id="steps_view">
+	<%= render @steps %>
+</div>
+
+<br />
+
+

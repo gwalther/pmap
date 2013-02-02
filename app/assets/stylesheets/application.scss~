@@ -1,0 +1,59 @@
+/*
+ * application.scss
+ *
+ * Important! Do *not* use Sprockets "require" syntax.
+ * Use @import to include other stylesheets and Compass mixins.
+ */
+
+// Include some nice mixins
+
+@import "compass/css3";
+
+@import "sassy-buttons";
+
+@import "blueprint/reset";
+@import "partials/base";
+@import "blueprint";
+@import "blueprint/liquid";
+@import "compass/layout/grid-background";
+@import "processdefs";
+@import "steps";
+
+
+
+body {
+	font-family: 'Lucida Grande', Arial, sans-serif;
+	padding:10px;	
+}
+
+.blue_button { @include sassy-button("glass", 7px, 12px, #4ba3cc)}
+.red_button { @include sassy-button("glass", 7px, 12px, #e86a43)}
+.green_button { @include sassy-button("glass", 7px, 12px, #8cbe5f)}
+
+#content_container {
+	padding-left:5px;
+}
+
+.title {font-size:24px;margin-bottom:10px}
+
+#header {color:#555555;padding:5px;font-size:large;}
+
+.section {padding:3px}
+
+.command_bar {margin-top:5px;}
+
+td, th {padding:10px}
+
+th {color:white;background-color:#333333}
+
+#error_explanation {
+		color:maroon;
+		padding:5px;
+
+	}
+
+#error_list {
+	padding:10px;
+}
+
+

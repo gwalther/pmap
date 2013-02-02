@@ -1,0 +1,10 @@
+
+  <div class="processdef_block">
+	  <div class="section"><b>Process: <%= processdef.name %></b></div>
+    <div class="section"><%= processdef.description %></div>
+    <div class="command_bar section">
+	    <%= link_to 'Show', processdef_steps_path(processdef), :class => "blue_button" %> | 
+	    <%= link_to 'Edit', edit_processdef_path(processdef), :class => "blue_button" %> | 
+	    <%= link_to 'Delete', processdef, method: :delete, :class => "red_button", data: { confirm: 'Are you sure?' } %></div>
+  </div>
+  <br/>

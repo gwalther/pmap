@@ -1,0 +1,6 @@
+<div class="title">Editing Step for <%= @processdef.name %></div>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', [@processdef, @step] %> |
+<%= link_to 'Back', processdef_steps_path(@processdef) %>

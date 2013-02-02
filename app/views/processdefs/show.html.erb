@@ -1,0 +1,23 @@
+<div id="processdef" class="container">
+
+<div class="content">
+	<div id="sections">
+		<p class="section">
+			<b>Process:</b>
+			<%= @processdef.name %>
+		</p>
+		<p class="section">
+			<%= @processdef.description %>
+		</p>
+
+	</div>
+	<div class="command_bar section">
+		<%= link_to 'Edit', edit_processdef_path(@processdef), :class => "blue_button" %> |
+		<%= link_to 'Back', processdefs_path, :class => "blue_button" %>
+	</div>
+
+
+</div>
+
+
+</div>

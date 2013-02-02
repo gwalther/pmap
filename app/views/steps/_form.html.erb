@@ -1,0 +1,39 @@
+
+	<% if @step.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@step.errors.count, "error") %> prohibited this step from being saved:</h2>
+
+			<ul id="error_list">
+				<% @step.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+
+<%= form_for([@processdef, @step]) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :size => "20x5" %>
+  </div>
+  <div class="field">
+    <%= f.label :pt %><br />
+    <%= f.number_field :pt %>
+  </div>
+  <div class="field">
+    <%= f.label :lt %><br />
+    <%= f.number_field :lt %>
+  </div>
+  <div class="field">
+    <%= f.label :step_order %><br />
+    <%= f.number_field :step_order %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

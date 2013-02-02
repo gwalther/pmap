@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pmap</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div id="header">
+
+		<h1><%= link_to "RAIO Performance Optimization Mapper", root_url %></h1>
+
+	</div>
+
+	<div id='notice'>
+		<p id="notice"><%= notice %></p>
+	</div>
+
+	<% if @step.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@step.errors.count, "error") %> prohibited this step from being saved:</h2>
+
+			<ul id="error_list">
+				<% @step.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+
+
+	<hr/>
+
+	<div id="content_container">
+
+		<%= yield %>
+
+	</div>
+
+</body>
+</html>
